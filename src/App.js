@@ -1,5 +1,6 @@
+import Layout from './layout';
 const App = () => {
-  return <>This is portfolio app</>;
+  return <Layout />;
 };
 
 export default App;
