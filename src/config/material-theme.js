@@ -69,6 +69,15 @@ const theme = createTheme({
         },
       },
     },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          display: 'flex',
+          flexDirection: 'column',
+          borderRadius: '2.0rem',
+        },
+      },
+    },
   },
 });
 export default theme;
