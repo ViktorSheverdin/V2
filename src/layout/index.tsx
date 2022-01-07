@@ -1,9 +1,11 @@
 import { Stack, Box, Card, CardContent } from '@mui/material';
 import AboutMe from '../aboutMe';
+import Header from '../Header';
 
 const Layout = () => {
   return (
     <Stack direction='column'>
+      <Header />
       <AboutMe />
       <Box
         sx={{
@@ -11,7 +13,7 @@ const Layout = () => {
           justifyContent: 'center',
           alignItems: 'center',
           paddingY: '2.8rem',
-          backgroundColor: 'primary.main',
+          backgroundColor: 'primary.200',
         }}
       >
         <Card sx={{ height: '100%' }}>

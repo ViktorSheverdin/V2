@@ -78,6 +78,17 @@ const theme = createTheme({
         },
       },
     },
+    MuiTypography: {
+      styleOverrides: {
+        root: {
+          fontSize: '1.6rem',
+          lineHeight: '2.2rem',
+          fontWeight: '400',
+          color: globalTheme.palette.primary[600],
+          paddingTop: '0.2rem',
+        },
+      },
+    },
   },
 });
 export default theme;
