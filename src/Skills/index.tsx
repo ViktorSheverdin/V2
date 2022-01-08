@@ -1,4 +1,4 @@
-import { Box, Typography, Stack, Grid } from '@mui/material';
+import { Box, Stack, Grid } from '@mui/material';
 import AboutMyself from '../components/AboutMyself';
 import ProgressBar from '../components/ProgressBar/ProgressBar';
 
@@ -16,6 +16,7 @@ const Skills = () => {
         alignItems: 'center',
         backgroundColor: 'primary.200',
         height: '90vh',
+        marginTop: '10rem',
       }}
     >
       <Grid container sx={{ width: '70%' }} columnSpacing={'15rem'}>
