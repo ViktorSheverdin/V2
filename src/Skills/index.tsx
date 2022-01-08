@@ -16,7 +16,6 @@ const Skills = () => {
         alignItems: 'center',
         backgroundColor: 'primary.200',
         height: '90vh',
-        marginTop: '10rem',
       }}
     >
       <Grid container sx={{ width: '70%' }} columnSpacing={'15rem'}>
