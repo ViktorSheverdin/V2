@@ -13,8 +13,8 @@ const globalTheme = createTheme({
   },
   palette: {
     primary: {
-      main: '#5029ef',
-      200: '#eaf0fe',
+      main: '#766dff',
+      200: '#f7f7f7',
       300: '#dfe5f3',
       400: '#6f6e89',
       500: '#250f7f',
@@ -22,7 +22,7 @@ const globalTheme = createTheme({
       700: '#f7f9ff',
     },
     secondary: {
-      main: '#09f5a2',
+      main: '#88f3ff',
     },
     common: {
       300: '#292954',
@@ -54,6 +54,11 @@ const globalTheme = createTheme({
     },
   },
   //END OF COLORS
+  shadows: {
+    shadow: {
+      main: 'rgb(145 158 171 / 24%) 0px 0px 2px 0px, rgb(145 158 171 / 24%) 0px 12px 24px 0px',
+    },
+  },
 });
 
 const theme = createTheme({
@@ -77,6 +82,19 @@ const theme = createTheme({
           borderRadius: '2.0rem',
         },
       },
+    },
+    MuiPaper: {
+      variants: [
+        {
+          props: { variant: 'hoverable' },
+          style: {
+            boxShadow: '0px 12px 50px rgba(80, 41, 239, 0.04)',
+            '&:hover': {
+              boxShadow: '0px 12px 30px rgba(37, 15, 127, 0.08)',
+            },
+          },
+        },
+      ],
     },
     MuiTypography: {
       styleOverrides: {

@@ -1,21 +1,11 @@
-import {
-  Box,
-  Card,
-  CardContent,
-  Typography,
-  Grid,
-  Stack,
-  Button,
-} from '@mui/material';
+import { Box, Card, CardContent, Typography, Grid, Stack } from '@mui/material';
 import Image from 'material-ui-image';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import HomeIcon from '@mui/icons-material/Home';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import Avatar from '../assets/avatar.jpg';
+import { SocialMediaButtons } from '../components';
+
 const AboutMe = () => {
   return (
     <Box
@@ -23,16 +13,16 @@ const AboutMe = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: '-62rem',
-        backgroundColor: 'primary.100',
+        backgroundColor: 'primary.200',
       }}
     >
       <Card
         sx={{
-          maxHeight: '76rem',
-          height: '76rem',
           width: '162rem',
           marginX: '2.8rem',
+          marginTop: '-62rem',
+          marginBottom: '2.8rem',
+          boxShadow: 'shadow.main',
         }}
       >
         <CardContent
@@ -45,16 +35,13 @@ const AboutMe = () => {
         >
           <Grid container alignItems='stretch' sx={{ marginX: '2rem' }}>
             <Grid item xs={12} md={6}>
-              <Box sx={{ marginTop: '-14rem' }}>
-                <Image
-                  src='https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80'
-                  style={{
-                    width: '100%',
-                    height: 'auto !important',
-                    objectFit: 'contain',
-                  }}
-                />
-              </Box>
+              <Image
+                src={Avatar}
+                style={{
+                  width: '100%',
+                  objectFit: 'scale-down',
+                }}
+              />
             </Grid>
             <Grid
               item
@@ -154,29 +141,11 @@ const AboutMe = () => {
                 <Stack
                   direction='row'
                   spacing={'1rem'}
-                  sx={{ paddingTop: '2rem' }}
+                  sx={{
+                    paddingTop: '2rem',
+                  }}
                 >
-                  <Button
-                    variant='contained'
-                    endIcon={<FontAwesomeIcon size='2x' icon={faLinkedinIn} />}
-                    sx={{ width: '2rem', height: '2rem' }}
-                  ></Button>
-
-                  <Button
-                    variant='contained'
-                    endIcon={<FontAwesomeIcon size='2x' icon={faGithub} />}
-                    sx={{ width: '2rem', height: '2rem' }}
-                  ></Button>
-                  <Button
-                    variant='contained'
-                    endIcon={<FontAwesomeIcon size='2x' icon={faInstagram} />}
-                    sx={{ width: '2rem', height: '2rem' }}
-                  ></Button>
-                  <Button
-                    variant='contained'
-                    endIcon={<FontAwesomeIcon size='2x' icon={faFacebook} />}
-                    sx={{ width: '2rem', height: '2rem' }}
-                  ></Button>
+                  <SocialMediaButtons />
                 </Stack>
               </Stack>
             </Grid>
