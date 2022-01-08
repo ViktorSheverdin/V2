@@ -1,34 +1,14 @@
-import { Stack, Box, Card, CardContent } from '@mui/material';
-import AboutMe from '../aboutMe';
+import { Stack } from '@mui/material';
 import Header from '../Header';
+import AboutMe from '../aboutMe';
+import Skills from '../Skills';
 
 const Layout = () => {
   return (
     <Stack direction='column'>
       <Header />
       <AboutMe />
-      <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          paddingY: '2.8rem',
-          backgroundColor: 'primary.200',
-        }}
-      >
-        <Card sx={{ height: '100%' }}>
-          <CardContent
-            sx={{
-              display: 'flex',
-              alignItems: 'center',
-              paddingY: '2.8rem',
-              color: 'primary.400',
-            }}
-          >
-            This is about me
-          </CardContent>
-        </Card>
-      </Box>
+      <Skills />
     </Stack>
   );
 };
