@@ -15,7 +15,7 @@ const Skills = () => {
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'primary.200',
-        height: '100vh',
+        height: '90vh',
       }}
     >
       <Grid container sx={{ width: '70%' }} columnSpacing={'15rem'}>
