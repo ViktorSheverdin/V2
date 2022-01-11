@@ -3,8 +3,8 @@ import Image from 'material-ui-image';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import HomeIcon from '@mui/icons-material/Home';
-import Avatar from '../assets/avatar.jpg';
-import { SocialMediaButtons } from '../components';
+import Avatar from '../../assets/avatar.jpg';
+import { SocialMediaButtons } from '../../components';
 
 const AboutMe = () => {
   return (
