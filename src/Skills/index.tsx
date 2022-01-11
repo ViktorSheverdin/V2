@@ -1,4 +1,4 @@
-import { Box, Stack, Grid, Card } from '@mui/material';
+import { Box, Stack, Grid } from '@mui/material';
 import AboutMyself from '../components/AboutMyself';
 import ProgressBar from '../components/ProgressBar/ProgressBar';
 
@@ -10,16 +10,6 @@ const Skills = () => {
   ];
   return (
     <Box
-      // sx={{
-      //   display: 'flex',
-      //   flexDirection: 'column',
-      //   justifyContent: 'center',
-      //   alignItems: 'center',
-      //   alignSelf: 'center',
-      //   backgroundColor: 'primary.200',
-      //   height: '90vh',
-      //   paddingX: '2.8rem',
-      // }}
       sx={{
         display: 'flex',
         justifyContent: 'center',
@@ -31,10 +21,7 @@ const Skills = () => {
       <Box
         sx={{
           width: '60%',
-          // marginX: '2.8rem',
-          // marginTop: '-62rem',
           marginBottom: '2.8rem',
-          // boxShadow: 'shadow.main',
           height: '70vh',
         }}
       >
