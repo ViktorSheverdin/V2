@@ -1,6 +1,7 @@
 import { Box, Stack, Grid } from '@mui/material';
 import AboutMyself from '../../components/AboutMyself';
 import ProgressBar from '../../components/ProgressBar/ProgressBar';
+import SkillsAchivements from '../../components/SkillsAchivements';
 
 const Skills = () => {
   const skills = [
@@ -22,12 +23,14 @@ const Skills = () => {
         sx={{
           width: '60%',
           marginBottom: '2.8rem',
-          height: '70vh',
         }}
       >
         <Grid container sx={{ height: '100%' }} columnSpacing={'1rem'}>
           <Grid item xs={12} md={6}>
-            <AboutMyself />
+            <Stack direction='column' spacing='2rem'>
+              <AboutMyself />
+              <SkillsAchivements />
+            </Stack>
           </Grid>
           <Grid item xs={12} md={6}>
             <Stack direction='column'>
