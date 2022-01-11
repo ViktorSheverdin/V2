@@ -8,6 +8,7 @@ const AboutMyself = () => {
           fontSize: '3.6rem',
           marginBottom: '1.8rem',
           textTransform: 'uppercase',
+          lineHeight: '3.8rem',
         }}
       >
         About myself
