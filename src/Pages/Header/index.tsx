@@ -1,5 +1,5 @@
 import { Box } from '@mui/system';
-import theme from '../config/material-theme';
+import theme from '../../config/material-theme';
 
 const Header = () => {
   return (

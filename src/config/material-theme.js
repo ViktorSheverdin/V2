@@ -15,11 +15,11 @@ const globalTheme = createTheme({
     primary: {
       main: '#766dff',
       200: '#f7f7f7',
-      300: '#dfe5f3',
+      300: '#E0E0DE',
       400: '#6f6e89',
-      500: '#250f7f',
+      500: '#e1e1e1',
       600: '#191933',
-      700: '#f7f9ff',
+      700: '#777',
     },
     secondary: {
       main: '#88f3ff',
