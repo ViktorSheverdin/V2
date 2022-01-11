@@ -2,6 +2,8 @@ import { Stack } from '@mui/material';
 import AchivementBox from '../AchivementBox';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faCode } from '@fortawesome/free-solid-svg-icons';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import theme from '../../config/material-theme';
 
 const SkillsAchivements = () => {
@@ -24,7 +26,7 @@ const SkillsAchivements = () => {
         icon={
           <FontAwesomeIcon
             size='2x'
-            icon={faGithub}
+            icon={faCode}
             style={{
               color: `${theme.palette.primary.main}`,
             }}
@@ -37,7 +39,7 @@ const SkillsAchivements = () => {
         icon={
           <FontAwesomeIcon
             size='2x'
-            icon={faGithub}
+            icon={faSearch}
             style={{
               color: `${theme.palette.primary.main}`,
             }}
