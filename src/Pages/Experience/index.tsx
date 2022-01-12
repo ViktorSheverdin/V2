@@ -1,6 +1,9 @@
 import { Box, Button, Stack, Typography } from '@mui/material';
 import { useState } from 'react';
 import theme from '../../config/material-theme';
+import ExperienceField from './components/ExperienceField';
+import { WorkExperience } from './components/WorkExperience';
+import { EducationExperience } from './components/EducationExperience';
 
 const Experience = () => {
   const [isSelected, setIsSelected] = useState(true);
@@ -33,8 +36,9 @@ const Experience = () => {
                   setIsSelected(!isSelected);
                 }
               }}
+              sx={{ '&:hover': { color: 'inherit' } }}
             >
-              <Typography>Experience</Typography>
+              <Typography sx={{ color: 'inherit' }}>Experience</Typography>
             </Button>
             <Button
               variant={isSelected ? 'outlined' : 'contained'}
@@ -43,10 +47,49 @@ const Experience = () => {
                   setIsSelected(!isSelected);
                 }
               }}
+              sx={{ '&:hover': { color: 'inherit' } }}
             >
-              <Typography>Education</Typography>
+              <Typography sx={{ color: 'inherit' }}>Education</Typography>
             </Button>
           </Stack>
+          <Box
+            sx={{
+              '&:before': {
+                content: '""',
+                height: '100%',
+                width: '5px',
+                background: 'hsla(0,0%,100%,.2)',
+                top: '2rem',
+                left: '49.5%',
+                position: 'absolute',
+              },
+              position: 'relative',
+            }}
+          >
+            {isSelected
+              ? WorkExperience.map((experience) => {
+                  return (
+                    <ExperienceField
+                      from={experience.from}
+                      to={experience.to}
+                      title={experience.title}
+                      company={experience.company}
+                      city={experience.city}
+                    />
+                  );
+                })
+              : EducationExperience.map((experience) => {
+                  return (
+                    <ExperienceField
+                      from={experience.from}
+                      to={experience.to}
+                      title={experience.title}
+                      company={experience.company}
+                      city={experience.city}
+                    />
+                  );
+                })}
+          </Box>
         </Stack>
       </Box>
     </Box>

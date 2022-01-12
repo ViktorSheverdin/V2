@@ -93,7 +93,7 @@ const theme = createTheme({
         outlinedPrimary: {
           border: '0.1rem solid',
           borderColor: globalTheme.palette.primary[800],
-          color: globalTheme.palette.primary[600],
+          color: globalTheme.palette.primary[200],
           '&:hover': {
             border: '0.1rem solid',
             borderColor: globalTheme.palette.primary[200],
