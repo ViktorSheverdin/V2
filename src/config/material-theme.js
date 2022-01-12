@@ -20,6 +20,7 @@ const globalTheme = createTheme({
       500: '#e1e1e1',
       600: '#191933',
       700: '#777',
+      800: '#6c91e7',
     },
     secondary: {
       main: '#88f3ff',
@@ -64,6 +65,63 @@ const globalTheme = createTheme({
 const theme = createTheme({
   ...globalTheme,
   components: {
+    MuiButton: {
+      defaultProps: {
+        disableElevation: true,
+      },
+      styleOverrides: {
+        root: {
+          boxSizing: 'border-box',
+          // maxHeight: '4.8rem',
+          width: '14.5rem',
+          height: '5.5rem',
+          fontWeight: 500,
+          lineHeight: 1,
+          textTransform: 'none',
+          borderRadius: '0.4rem',
+          border: 'none',
+          '&.Mui-disabled': {
+            border: 'none',
+          },
+        },
+        contained: {
+          border: '0.1rem solid',
+        },
+        outlined: {
+          border: '0.1rem solid',
+        },
+        outlinedPrimary: {
+          border: '0.1rem solid',
+          borderColor: globalTheme.palette.primary[800],
+          color: globalTheme.palette.primary[600],
+          '&:hover': {
+            border: '0.1rem solid',
+            borderColor: globalTheme.palette.primary[200],
+            color: globalTheme.palette.white.main,
+            // backgroundColor: globalTheme.palette.primary.main,
+            background: 'hsl(0deg 0% 100% / 50%)',
+          },
+        },
+        containedPrimary: {
+          border: '0.1rem solid',
+          borderColor: globalTheme.palette.primary[800],
+          color: globalTheme.palette.primary[600],
+          backgroundColor: globalTheme.palette.primary[200],
+          '&:hover': {
+            border: '0.1rem solid',
+            borderColor: globalTheme.palette.primary[800],
+            color: globalTheme.palette.primary[600],
+            backgroundColor: globalTheme.palette.primary[200],
+          },
+        },
+        text: {
+          '&:hover': {
+            color: globalTheme.palette.primary.main,
+            backgroundColor: 'transparent',
+          },
+        },
+      },
+    },
     MuiCssBaseline: {
       styleOverrides: {
         body: {

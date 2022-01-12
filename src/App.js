@@ -2,6 +2,7 @@ import { Stack } from '@mui/material';
 import Header from './Pages/Header';
 import AboutMe from './Pages/AboutMe';
 import Skills from './Pages/Skills';
+import Experience from './Pages/Experience';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Header />
       <AboutMe />
       <Skills />
+      <Experience />
     </Stack>
   );
 };
