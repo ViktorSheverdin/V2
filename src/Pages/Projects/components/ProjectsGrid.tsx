@@ -1,13 +1,8 @@
-import { Grid, Stack, Typography } from '@mui/material';
+import { Grid } from '@mui/material';
 import { ProjectsList } from './ProjectsList';
+import ProjectContent from './ProjectContent';
 
 const ProjectsGrid = ({ filters }) => {
-  // const filteredProjects = ProjectsList.map((project) => {
-  //   if (project.technology.some((tech) => filter.includes(tech))) {
-  //     return project;
-  //   }
-  // });
-
   const filteredProjects: any =
     typeof filters !== 'undefined' && filters.length === 0
       ? ProjectsList
@@ -17,31 +12,13 @@ const ProjectsGrid = ({ filters }) => {
           }
           return result;
         }, []);
-  console.log(filteredProjects);
 
   return (
-    <Grid container spacing={'2.8rem'}>
-      {/* {ProjectsList.map((project) => { */}
-      {filteredProjects.map((project) => {
-        console.log(project.imgURL);
+    <Grid container spacing={'2.8rem'} sx={{ width: '100%' }}>
+      {filteredProjects.map((project, i) => {
         return (
-          <Grid item xs={'auto'}>
-            <Stack
-              sx={{
-                backgroundImage: `url(${project.imgURL})`,
-                width: '100%',
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: '100% auto',
-                minHeight: '21rem',
-                minWidth: '27.6rem',
-              }}
-            >
-              <Typography>{project.name}</Typography>
-              <Typography>{project.name}</Typography>
-              <Typography>{project.name}</Typography>
-              <Typography>{project.name}</Typography>
-              <Typography>{project.name}</Typography>
-            </Stack>
+          <Grid key={i} item xs={'auto'}>
+            <ProjectContent project={project} />
           </Grid>
         );
       })}

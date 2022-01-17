@@ -1,26 +1,29 @@
+import Devcon from '../../../assets/img/devcon.png';
+import Weather from '../../../assets/img/weather.png';
+
 export const ProjectsList = [
   {
     name: 'Developer Connector',
     description: 'Social network that helps employers to find developers',
     github: 'https://github.com/ViktorSheverdin/devNetwork',
     demoURL: 'https://protected-river-13776.herokuapp.com/',
-    imgURL: '../../../assets/img/devcon.png',
-    technology: ['React', 'Node.js'],
+    img: `url(${Devcon})`,
+    technology: ['React', 'Node.js', 'Python'],
   },
   {
     name: 'Weather forecast',
     description: 'Classical weather forecast project',
     github: 'https://github.com/ViktorSheverdin/weather_application',
     demoURL: 'https://yetanotherweatherapp.herokuapp.com/',
-    imgURL: '../../../assets/img/weather.png',
-    technology: ['JavaScript'],
+    img: `url(${Weather})`,
+    technology: ['React'],
   },
   {
     name: 'Developer Connector',
     description: 'Social network that helps employers to find developers',
     github: 'https://github.com/ViktorSheverdin/devNetwork',
     demoURL: 'https://protected-river-13776.herokuapp.com/',
-    imgURL: '../../../assets/img/devcon.png',
+    img: `url(${Weather})`,
     technology: ['React'],
   },
   {
@@ -28,7 +31,7 @@ export const ProjectsList = [
     description: 'Classical weather forecast project',
     github: 'https://github.com/ViktorSheverdin/weather_application',
     demoURL: 'https://yetanotherweatherapp.herokuapp.com/',
-    imgURL: '../../../assets/img/weather.png',
+    img: `url(${Devcon})`,
     technology: ['JavaScript'],
   },
   {
@@ -36,7 +39,7 @@ export const ProjectsList = [
     description: 'Social network that helps employers to find developers',
     github: 'https://github.com/ViktorSheverdin/devNetwork',
     demoURL: 'https://protected-river-13776.herokuapp.com/',
-    imgURL: '../../../assets/img/devcon.png',
+    img: `url(${Weather})`,
     technology: ['Node.js'],
   },
   {
@@ -44,7 +47,7 @@ export const ProjectsList = [
     description: 'Classical weather forecast project',
     github: 'https://github.com/ViktorSheverdin/weather_application',
     demoURL: 'https://yetanotherweatherapp.herokuapp.com/',
-    imgURL: '../../../assets/img/devcon.png',
+    img: `url(${Devcon})`,
     technology: ['Python'],
   },
 ];
