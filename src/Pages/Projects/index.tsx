@@ -52,7 +52,6 @@ const Projects = () => {
       <Stack sx={{ width: '70%', justifyContent: 'center' }}>
         <Stack sx={{ width: '100%', alignItems: 'center' }}>
           <Typography>My latest featured projects</Typography>
-          {/* <Box sx={{ borderBottom: 1, borderColor: 'divider' }}> */}
           <Box>
             <Tabs
               value={value}
@@ -60,13 +59,11 @@ const Projects = () => {
               aria-label='basic tabs example'
             >
               <Tab label='All' {...a11yProps(0)} />
-              {/* <Tab label='Item One' /> */}
               <Tab
                 label='React'
                 {...a11yProps(1)}
                 sx={{ marginLeft: '2.8rem' }}
               />
-              {/* <Tab label='Item Two' /> */}
               <Tab
                 label='Python'
                 {...a11yProps(2)}
@@ -80,24 +77,17 @@ const Projects = () => {
             </Tabs>
           </Box>
           <TabPanel value={value} index={0}>
-            <ProjectsGrid filters={'React'} />
+            <ProjectsGrid filters={[]} />
           </TabPanel>
           <TabPanel value={value} index={1}>
-            Item Two
+            <ProjectsGrid filters={['React']} />
           </TabPanel>
           <TabPanel value={value} index={2}>
-            Item Three
+            <ProjectsGrid filters={['Python']} />
           </TabPanel>
           <TabPanel value={value} index={3}>
-            Item four
+            <ProjectsGrid filters={['Flutter']} />
           </TabPanel>
-          {/* <Grid container>
-        <Grid item>
-          <Stack>
-            <Typography>Developer Connector</Typography>
-          </Stack>
-        </Grid>
-      </Grid> */}
         </Stack>
       </Stack>
     </Box>

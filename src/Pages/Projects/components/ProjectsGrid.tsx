@@ -1,9 +1,7 @@
 import { Grid, Stack, Typography } from '@mui/material';
 import { ProjectsList } from './ProjectsList';
 
-const ProjectsGrid = (filters) => {
-  let filter: any = ['React'];
-
+const ProjectsGrid = ({ filters }) => {
   // const filteredProjects = ProjectsList.map((project) => {
   //   if (project.technology.some((tech) => filter.includes(tech))) {
   //     return project;
@@ -11,10 +9,10 @@ const ProjectsGrid = (filters) => {
   // });
 
   const filteredProjects: any =
-    typeof filter !== 'undefined' && filter.length === 0
+    typeof filters !== 'undefined' && filters.length === 0
       ? ProjectsList
       : ProjectsList.reduce((result: any, project: any) => {
-          if (project.technology.some((tech: any) => filter?.includes(tech))) {
+          if (project.technology.some((tech: any) => filters?.includes(tech))) {
             result.push(project);
           }
           return result;
@@ -25,15 +23,17 @@ const ProjectsGrid = (filters) => {
     <Grid container spacing={'2.8rem'}>
       {/* {ProjectsList.map((project) => { */}
       {filteredProjects.map((project) => {
+        console.log(project.imgURL);
         return (
-          <Grid item xs={4}>
+          <Grid item xs={'auto'}>
             <Stack
               sx={{
-                backgroundImage: `url(https://media.gettyimages.com/photos/closeup-of-robin-bird-perched-on-a-stone-in-nature-picture-id1302079405?s=2048x2048)`,
+                backgroundImage: `url(${project.imgURL})`,
                 width: '100%',
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: '100% auto',
-                minHeight: '29rem',
+                minHeight: '21rem',
+                minWidth: '27.6rem',
               }}
             >
               <Typography>{project.name}</Typography>
