@@ -21,6 +21,7 @@ const SocialMediaButtons = () => {
           maxHeight: '4rem',
           minWidth: '4rem',
           minHeight: '4rem',
+          backgroundColor: 'primary.main',
         }}
       >
         <FontAwesomeIcon size='2x' icon={faLinkedinIn} />
@@ -38,6 +39,7 @@ const SocialMediaButtons = () => {
           maxHeight: '4rem',
           minWidth: '4rem',
           minHeight: '4rem',
+          backgroundColor: 'primary.main',
         }}
       >
         <FontAwesomeIcon size='2x' icon={faGithub} />
@@ -54,6 +56,7 @@ const SocialMediaButtons = () => {
           maxHeight: '4rem',
           minWidth: '4rem',
           minHeight: '4rem',
+          backgroundColor: 'primary.main',
         }}
       >
         <FontAwesomeIcon size='2x' icon={faInstagram} />
@@ -70,6 +73,7 @@ const SocialMediaButtons = () => {
           maxHeight: '4rem',
           minWidth: '4rem',
           minHeight: '4rem',
+          backgroundColor: 'primary.main',
         }}
       >
         <FontAwesomeIcon size='2x' icon={faFacebook} />

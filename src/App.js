@@ -3,6 +3,7 @@ import Header from './Pages/Header';
 import AboutMe from './Pages/AboutMe';
 import Skills from './Pages/Skills';
 import Experience from './Pages/Experience';
+import Projects from './Pages/Projects';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <AboutMe />
       <Skills />
       <Experience />
+      <Projects />
     </Stack>
   );
 };
