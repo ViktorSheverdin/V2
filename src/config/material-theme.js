@@ -24,6 +24,7 @@ const globalTheme = createTheme({
     },
     secondary: {
       main: '#88f3ff',
+      200: '#cccccc',
     },
     common: {
       300: '#292954',
@@ -138,6 +139,15 @@ const theme = createTheme({
           display: 'flex',
           flexDirection: 'column',
           borderRadius: '2.0rem',
+        },
+      },
+    },
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          '&:hover': {
+            color: globalTheme.palette.primary.main,
+          },
         },
       },
     },

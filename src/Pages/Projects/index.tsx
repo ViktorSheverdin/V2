@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, Grid, Stack, Typography, Tabs, Tab } from '@mui/material';
+import { Box, Stack, Typography, Tabs, Tab } from '@mui/material';
 import ProjectsGrid from './components/ProjectsGrid';
 
 const TabPanel = ({ children, value, index, ...other }) => {
@@ -27,10 +27,6 @@ const Projects = () => {
     console.log(newValue);
     setValue(newValue);
   };
-  const projects = [
-    { name: 'Developer Connector' },
-    { name: 'Developer Connector' },
-  ];
 
   const a11yProps = (index) => {
     return {
