@@ -1,13 +1,4 @@
-import { ListAltRounded } from '@mui/icons-material';
-import {
-  Box,
-  Stack,
-  Typography,
-  Link,
-  List,
-  ListItem,
-  ListItemText,
-} from '@mui/material';
+import { Box, Stack, Typography, Link } from '@mui/material';
 const Footer = () => {
   return (
     <Box
