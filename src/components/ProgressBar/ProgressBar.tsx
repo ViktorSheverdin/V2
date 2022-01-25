@@ -1,6 +1,10 @@
 import { Box, Typography } from '@mui/material';
 import theme from '../../config/material-theme';
+import { motion } from 'framer-motion';
+import { useRef } from 'react';
+
 const ProgressBar = ({ completedPercentage, skillName }) => {
+  const scrollRef = useRef(null);
   return (
     <>
       <Typography
@@ -12,6 +16,7 @@ const ProgressBar = ({ completedPercentage, skillName }) => {
       >
         {skillName} {completedPercentage}%
       </Typography>
+
       <Box
         sx={{
           display: 'flex',
@@ -37,10 +42,13 @@ const ProgressBar = ({ completedPercentage, skillName }) => {
           }}
         >
           <Box
+            component={motion.div}
+            initial={{ width: 0 }}
+            whileInView={{ width: `${completedPercentage}%` }}
+            transition={{ ease: 'easeOut', duration: 2 }}
+            viewport={{ once: true, margin: '-100px' }}
             sx={{
               height: '100%',
-              width: `${completedPercentage}%`,
-              transition: 'width 1s ease-in-out',
               backgroundImage: `linear-gradient(90deg,${theme.palette.primary.main},${theme.palette.secondary.main})`,
               borderRadius: 'inherit',
               textAlign: 'right',
