@@ -10,24 +10,35 @@ const ProjectContent = ({ project }) => {
       onMouseOver={() => setHover(true)}
       onMouseOut={() => setHover(false)}
       sx={{
+        position: 'relative',
+        width: '100%',
+        margin: 0,
         '&:hover': {
           cursor: 'pointer',
-          backgroundImage: `linear-gradient(90deg,${theme.palette.primary.main},${theme.palette.secondary.main})`,
         },
-        backgroundImage: project.img,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: '100% auto',
-        height: '31rem',
-        maxHeight: '31rem',
-        width: '37.6rem',
-        maxWidth: '37.6rem',
-        alignContent: 'center',
-        justifyContent: 'center',
-        textAlign: 'center',
       }}
     >
+      <img
+        src={project.img}
+        alt='img'
+        style={{
+          backgroundRepeat: 'no-repeat',
+          width: '100%',
+        }}
+      />
       {hover && (
-        <Stack direction='column'>
+        <Stack
+          direction='column'
+          sx={{
+            position: 'absolute',
+            width: '100%',
+            height: '100%',
+            backgroundImage: `linear-gradient(90deg,${theme.palette.primary.main},${theme.palette.secondary.main})`,
+            alignContent: 'center',
+            justifyContent: 'center',
+            textAlign: 'center',
+          }}
+        >
           <Typography sx={{ fontSize: '2rem', fontWeight: '700' }}>
             {project.name}
           </Typography>
@@ -55,11 +66,6 @@ const ProjectContent = ({ project }) => {
           </Stack>
         </Stack>
       )}
-      {/* <Typography>{project.name}</Typography>
-    <Typography>{project.name}</Typography>
-    <Typography>{project.name}</Typography>
-    <Typography>{project.name}</Typography>
-    <Typography>{project.name}</Typography> */}
     </Stack>
   );
 };

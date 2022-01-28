@@ -7,7 +7,8 @@ export const ProjectsList = [
     description: 'Social network that helps employers to find developers',
     github: 'https://github.com/ViktorSheverdin/devNetwork',
     demoURL: 'https://protected-river-13776.herokuapp.com/',
-    img: `url(${Devcon})`,
+    // img: `url(${Devcon})`,
+    img: Devcon,
     technology: ['React', 'Node.js', 'Python'],
   },
   {
@@ -15,7 +16,8 @@ export const ProjectsList = [
     description: 'Classical weather forecast project',
     github: 'https://github.com/ViktorSheverdin/weather_application',
     demoURL: 'https://yetanotherweatherapp.herokuapp.com/',
-    img: `url(${Weather})`,
+    // img: `url(${Devcon})`,
+    img: Devcon,
     technology: ['React'],
   },
   {
@@ -23,7 +25,7 @@ export const ProjectsList = [
     description: 'Social network that helps employers to find developers',
     github: 'https://github.com/ViktorSheverdin/devNetwork',
     demoURL: 'https://protected-river-13776.herokuapp.com/',
-    img: `url(${Weather})`,
+    img: Weather,
     technology: ['React'],
   },
   {
@@ -31,7 +33,7 @@ export const ProjectsList = [
     description: 'Classical weather forecast project',
     github: 'https://github.com/ViktorSheverdin/weather_application',
     demoURL: 'https://yetanotherweatherapp.herokuapp.com/',
-    img: `url(${Devcon})`,
+    img: Devcon,
     technology: ['JavaScript'],
   },
   {
@@ -39,7 +41,7 @@ export const ProjectsList = [
     description: 'Social network that helps employers to find developers',
     github: 'https://github.com/ViktorSheverdin/devNetwork',
     demoURL: 'https://protected-river-13776.herokuapp.com/',
-    img: `url(${Weather})`,
+    img: Weather,
     technology: ['Node.js'],
   },
   {
@@ -47,7 +49,15 @@ export const ProjectsList = [
     description: 'Classical weather forecast project',
     github: 'https://github.com/ViktorSheverdin/weather_application',
     demoURL: 'https://yetanotherweatherapp.herokuapp.com/',
-    img: `url(${Devcon})`,
+    img: Devcon,
     technology: ['Python'],
+  },
+  {
+    name: 'Weather forecast',
+    description: 'Classical weather forecast project',
+    github: 'https://github.com/ViktorSheverdin/weather_application',
+    demoURL: 'https://yetanotherweatherapp.herokuapp.com/',
+    img: Devcon,
+    technology: ['React'],
   },
 ];

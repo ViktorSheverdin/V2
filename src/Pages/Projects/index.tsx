@@ -9,10 +9,11 @@ const TabPanel = ({ children, value, index, ...other }) => {
       hidden={value !== index}
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
+      sx={{ width: '100%' }}
       {...other}
     >
       {value === index && (
-        <Box sx={{ padding: '2.8rem' }}>
+        <Box sx={{ padding: '1.8rem', width: '100%' }}>
           <Typography>{children}</Typography>
         </Box>
       )}
