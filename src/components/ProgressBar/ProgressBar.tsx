@@ -1,10 +1,8 @@
 import { Box, Typography } from '@mui/material';
 import theme from '../../config/material-theme';
 import { motion } from 'framer-motion';
-import { useRef } from 'react';
 
 const ProgressBar = ({ completedPercentage, skillName }) => {
-  const scrollRef = useRef(null);
   return (
     <>
       <Typography
