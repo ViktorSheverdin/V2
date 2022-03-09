@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, Stack, Typography } from '@mui/material';
+import { Stack, Typography } from '@mui/material';
 import theme from '../../../config/material-theme';
 import ProjectDetailsModal from '../../../components/Modals/ProjectDetailsModal';
 
