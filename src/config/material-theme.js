@@ -99,7 +99,6 @@ const theme = createTheme({
             border: '0.1rem solid',
             borderColor: globalTheme.palette.primary[200],
             color: globalTheme.palette.white.main,
-            // backgroundColor: globalTheme.palette.primary.main,
             background: 'hsl(0deg 0% 100% / 50%)',
           },
         },

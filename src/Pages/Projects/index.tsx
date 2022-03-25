@@ -14,7 +14,9 @@ const TabPanel = ({ children, value, index, ...other }) => {
     >
       {value === index && (
         <Box sx={{ padding: '1.8rem', width: '100%' }}>
-          <Typography>{children}</Typography>
+          <Box sx={{ justifyContent: 'center', display: 'flex' }}>
+            {children}
+          </Box>
         </Box>
       )}
     </Box>
@@ -73,16 +75,20 @@ const Projects = () => {
               />
             </Tabs>
           </Box>
-          <TabPanel value={value} index={0}>
+          <TabPanel value={value} index={0} sx={{ alignContent: 'center' }}>
             <ProjectsGrid filters={[]} />
           </TabPanel>
-          <TabPanel value={value} index={1}>
+          <TabPanel value={value} index={1} sx={{ alignContent: 'center' }}>
             <ProjectsGrid filters={['React']} />
           </TabPanel>
-          <TabPanel value={value} index={2}>
+          <TabPanel
+            value={value}
+            index={2}
+            sx={{ alignContent: 'center', alignItems: 'center' }}
+          >
             <ProjectsGrid filters={['Python']} />
           </TabPanel>
-          <TabPanel value={value} index={3}>
+          <TabPanel value={value} index={3} sx={{ alignContent: 'center' }}>
             <ProjectsGrid filters={['Flutter']} />
           </TabPanel>
         </Stack>
