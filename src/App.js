@@ -1,10 +1,5 @@
 import { Stack } from '@mui/material';
-import Header from './Pages/Header';
-import AboutMe from './Pages/AboutMe';
-import Skills from './Pages/Skills';
-import Experience from './Pages/Experience';
-import Projects from './Pages/Projects';
-import Footer from './Pages/Footer';
+import { AboutMe, Experience, Footer, Header, Projects, Skills } from './Pages';
 
 const App = () => {
   return (

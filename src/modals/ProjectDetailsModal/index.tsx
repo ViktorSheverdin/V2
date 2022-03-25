@@ -9,6 +9,8 @@ import {
   Typography,
 } from '@mui/material';
 
+import { TechnologyDisplay } from '../../components';
+
 const ProjectDetailsModal = ({ open, onClose, project }) => {
   console.log(project);
   return (
@@ -78,9 +80,9 @@ const ProjectDetailsModal = ({ open, onClose, project }) => {
           >
             Technologies
           </Typography>
-          <Stack direction={'row'} sx={{ marginTop: '1rem' }}>
-            {project.technologies.map((tech) => {
-              return <Typography>{tech}</Typography>;
+          <Stack direction={'row'} spacing='1rem' sx={{ marginTop: '1rem' }}>
+            {project.technologies.map((technology) => {
+              return <TechnologyDisplay technology={technology} />;
             })}
           </Stack>
           <Typography

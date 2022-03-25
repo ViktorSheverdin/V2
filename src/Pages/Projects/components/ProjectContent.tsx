@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Box, Stack, Typography } from '@mui/material';
 import theme from '../../../config/material-theme';
-import ProjectDetailsModal from '../../../components/Modals/ProjectDetailsModal';
+import { ProjectDetailsModal } from '../../../modals';
 
 const HoverDisplay = ({ project }) => {
   return (

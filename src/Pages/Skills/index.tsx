@@ -1,7 +1,5 @@
 import { Box, Stack, Grid } from '@mui/material';
-import AboutMyself from '../../components/AboutMyself';
-import ProgressBar from '../../components/ProgressBar/ProgressBar';
-import SkillsAchivements from '../../components/SkillsAchivements';
+import { AboutMyself, ProgressBar, SkillsAchivements } from '../../components';
 
 const Skills = () => {
   const skills = [
