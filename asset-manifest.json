@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.js": "/v2/static/js/main.946aef0b.js",
+    "main.js": "/v2/static/js/main.20c050eb.js",
+    "static/media/starbucks.png": "/v2/static/media/starbucks.3a1eba2c0f1b1b51e1e6.png",
     "static/media/devcon.png": "/v2/static/media/devcon.6d6ab2e35eb54d55155a.png",
     "static/media/weather.png": "/v2/static/media/weather.e2cfc6d04c948cbe5a37.png",
-    "static/media/avatar.jpg": "/v2/static/media/avatar.d0d38e3d49ba6d0b2dcc.jpg",
+    "static/media/avatar.jpg": "/v2/static/media/avatar.683a2efa0b743d74697f.jpg",
     "index.html": "/v2/index.html",
-    "main.946aef0b.js.map": "/v2/static/js/main.946aef0b.js.map"
+    "main.20c050eb.js.map": "/v2/static/js/main.20c050eb.js.map"
   },
   "entrypoints": [
-    "static/js/main.946aef0b.js"
+    "static/js/main.20c050eb.js"
   ]
 }
