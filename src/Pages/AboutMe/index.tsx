@@ -1,5 +1,4 @@
-import { Box, Card, CardContent, Typography, Grid, Stack } from '@mui/material';
-import Image from 'material-ui-image';
+import { Box, Card, Grid, CardContent, Typography, Stack } from '@mui/material';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import HomeIcon from '@mui/icons-material/Home';
@@ -27,35 +26,48 @@ const AboutMe = () => {
       >
         <CardContent
           sx={{
-            display: 'flex',
-            alignItems: 'center',
             paddingY: '2.8rem',
             color: 'primary.400',
           }}
         >
           <Grid container alignItems='stretch' sx={{ marginX: '2rem' }}>
-            <Grid item xs={12} md={6}>
-              <Image
-                src={Avatar}
-                style={{
-                  width: '100%',
-                  objectFit: 'scale-down',
-                }}
-              />
+            <Grid
+              item
+              xs={12}
+              md={6}
+              sx={{
+                display: 'flex',
+                alignContent: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <Box>
+                <img
+                  src={Avatar}
+                  alt='img'
+                  height='100%'
+                  width='100%'
+                  style={{ paddingRight: '2rem' }}
+                />
+              </Box>
             </Grid>
             <Grid
               item
               xs={12}
               md={6}
-              sx={{ paddingLeft: '12rem', alignSelf: 'center' }}
+              sx={{ paddingLeft: '1rem', alignSelf: 'center' }}
             >
               <Stack
                 direction='column'
-                sx={{ alignContent: 'center', justifyContent: 'center' }}
+                sx={{
+                  alignContent: 'center',
+                  justifyContent: 'center',
+                  maxWidth: '55rem',
+                }}
               >
                 <Typography
                   sx={{
-                    fontSize: '1.4rem',
+                    fontSize: '1.8rem',
                     textTransform: 'uppercase',
                     color: 'primary.600',
                     fontWeight: '400',
@@ -71,7 +83,7 @@ const AboutMe = () => {
                     fontSize: '4.8rem',
                     textTransform: 'uppercase',
                     color: 'primary.600',
-                    fontWeight: '500',
+                    fontWeight: '700',
                     lineHeight: '4.8rem',
                     marginBottom: '1.5rem',
                   }}
@@ -93,26 +105,19 @@ const AboutMe = () => {
                 </Typography>
                 <Typography
                   sx={{
-                    fontSize: '1.6rem',
+                    fontSize: '2rem',
                     color: 'primary.400',
                     fontWeight: '400',
-                    lineHeight: '2.2rem',
+                    lineHeight: '2.5rem',
                     marginBottom: '4rem',
                     whiteSpace: 'pre-line',
+                    paddingRight: '2rem',
                   }}
                 >
-                  {`Main area of expertise is automation and full stack
-                    development. Currently working with Houle IT team deploying
-                    various custom scripts and applications to automate tasks
-                    and enhance business processes. Focus is on maintaining
-                    custom system that connects on Microsoft API for Skype,
-                    Outlook, and AD.                    
-                    
-                    As well as that, I work with SCCM and
-                    Carbon Black security systems and end-user support. I am an
-                    avid full-stack developer at heart, with a passion for
-                    learning and implementing the latest JavaScript frameworks
-                    to improve usability of web builds.`}
+                  I am a Front-End engineer, and for the last several years I
+                  have been creating elegant solutions for an astonishing UI
+                  experience, and implementing best code practices for an easy
+                  implementation and scalability.
                 </Typography>
                 <Stack direction='row'>
                   <PhoneIcon fontSize='large' />

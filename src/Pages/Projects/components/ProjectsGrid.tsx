@@ -21,9 +21,9 @@ const ProjectsGrid = ({ filters }) => {
       direction={'row'}
       spacing={'2.8rem'}
       sx={{
-        width: filteredProjects.length < 3 ? '66.7%' : '100%',
-        // width: '100%',
+        width: filteredProjects.length === 2 ? '66.7%' : '100%',
         alignSelf: 'center',
+        justifyContent: filteredProjects.length > 3 ? 'flex-start' : 'center',
       }}
     >
       {filteredProjects.map((project, i) => {
@@ -34,8 +34,6 @@ const ProjectsGrid = ({ filters }) => {
             xs={12}
             sm={6}
             lg={filteredProjects.length < 3 ? 6 : 4}
-            // lg={4}
-            // sx={{ width: filteredProjects.length < 3 ? '66.7%' : '100%' }}
           >
             <ProjectContent project={project} />
           </Grid>

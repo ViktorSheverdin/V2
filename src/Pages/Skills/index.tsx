@@ -2,10 +2,13 @@ import { Box, Stack, Grid } from '@mui/material';
 import { AboutMyself, ProgressBar, SkillsAchivements } from '../../components';
 
 const Skills = () => {
-  const skills = [
-    { name: 'react', score: 90 },
+  const achivementList = [
     { name: 'JavaScript', score: 90 },
+    { name: 'react', score: 90 },
     { name: 'CSS', score: 70 },
+    { name: 'TypeScript', score: 60 },
+    { name: 'Redux', score: 50 },
+    { name: 'React Router', score: 50 },
   ];
   return (
     <Box
@@ -19,25 +22,28 @@ const Skills = () => {
     >
       <Box
         sx={{
-          width: '60%',
+          width: '70%',
           marginBottom: '2.8rem',
         }}
       >
-        <Grid container sx={{ height: '100%' }} columnSpacing={'1rem'}>
-          <Grid item xs={12} md={6}>
-            <Stack direction='column' spacing='2rem'>
+        <Grid container sx={{ height: '100%' }} columnSpacing={'3rem'}>
+          <Grid item sm={12} md={12} lg={7}>
+            <Stack
+              direction='column'
+              spacing='2rem'
+              sx={{ marginRight: '5rem', width: '100%' }}
+            >
               <AboutMyself />
               <SkillsAchivements />
             </Stack>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item sm={12} md={12} lg={5}>
             <Stack direction='column'>
-              {skills.map((skill) => {
+              {achivementList.map(({ score, name }) => {
                 return (
-                  <ProgressBar
-                    completedPercentage={skill.score}
-                    skillName={skill.name}
-                  />
+                  <Box sx={{ marginBottom: '2rem' }}>
+                    <ProgressBar completedPercentage={score} skillName={name} />
+                  </Box>
                 );
               })}
             </Stack>

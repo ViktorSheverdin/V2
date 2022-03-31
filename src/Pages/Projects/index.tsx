@@ -23,6 +23,21 @@ const TabPanel = ({ children, value, index, ...other }) => {
   );
 };
 
+const TypographyTitle = ({ title }) => {
+  return (
+    <Typography
+      sx={{
+        fontFamily: 'Heebo ,sans-serif',
+        fontSize: '1.6rem',
+        lineHeight: '2rem',
+        fontWeight: '500',
+      }}
+    >
+      {title}
+    </Typography>
+  );
+};
+
 const Projects = () => {
   const [value, setValue] = useState(0);
 
@@ -50,29 +65,42 @@ const Projects = () => {
     >
       <Stack sx={{ width: '70%', justifyContent: 'center' }}>
         <Stack sx={{ width: '100%', alignItems: 'center' }}>
-          <Typography>My latest featured projects</Typography>
+          <Typography
+            sx={{
+              fontFamily: 'Heebo ,sans-serif',
+              fontSize: '3.6rem',
+              marginBottom: '1.8rem',
+              textTransform: 'uppercase',
+              lineHeight: '3.8rem',
+            }}
+          >
+            My latest featured projects
+          </Typography>
           <Box>
             <Tabs
               value={value}
               onChange={handleChange}
               aria-label='basic tabs example'
             >
-              <Tab label='All' {...a11yProps(0)} />
               <Tab
-                label='React'
+                label={<TypographyTitle title={'All'} />}
+                {...a11yProps(0)}
+              />
+              <Tab
+                label={<TypographyTitle title={'React'} />}
                 {...a11yProps(1)}
                 sx={{ marginLeft: '2.8rem' }}
               />
               <Tab
-                label='Python'
+                label={<TypographyTitle title={'Python'} />}
                 {...a11yProps(2)}
                 sx={{ marginLeft: '2.8rem' }}
               />
-              <Tab
-                label='Flutter'
+              {/* <Tab
+                label={<TypographyTitle title={"All"} />}
                 {...a11yProps(3)}
                 sx={{ marginLeft: '2.8rem' }}
-              />
+              /> */}
             </Tabs>
           </Box>
           <TabPanel value={value} index={0} sx={{ alignContent: 'center' }}>
@@ -88,9 +116,9 @@ const Projects = () => {
           >
             <ProjectsGrid filters={['Python']} />
           </TabPanel>
-          <TabPanel value={value} index={3} sx={{ alignContent: 'center' }}>
+          {/* <TabPanel value={value} index={3} sx={{ alignContent: 'center' }}>
             <ProjectsGrid filters={['Flutter']} />
-          </TabPanel>
+          </TabPanel> */}
         </Stack>
       </Stack>
     </Box>
