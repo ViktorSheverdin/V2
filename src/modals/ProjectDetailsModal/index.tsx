@@ -14,15 +14,12 @@ import { TechnologyDisplay } from '../../components';
 const ProjectDetailsModal = ({ open, onClose, project }) => {
   console.log(project);
   return (
-    <Dialog
-      open={open}
-      onClose={onClose}
-      fullWidth
-      // maxWidth='sm'
-      scroll='body'
-    >
+    <Dialog open={open} onClose={onClose} fullWidth scroll='body'>
       <DialogContent>
-        <Stack direction='column'>
+        <Stack
+          direction='column'
+          sx={{ marginBottom: project.demoURL === '' ? '2rem' : 0 }}
+        >
           <Typography
             sx={{
               fontWeight: '700',
@@ -44,7 +41,14 @@ const ProjectDetailsModal = ({ open, onClose, project }) => {
           >
             {project.shortDescription}
           </Typography>
-          <Box sx={{ width: '100%', height: 'auto', marginTop: '2rem' }}>
+          <Box
+            sx={{
+              width: '80%',
+              height: 'auto',
+              marginTop: '2rem',
+              alignSelf: 'center',
+            }}
+          >
             <img src={project.img} alt='img' height='100%' width='100%' />
           </Box>
           <Typography
@@ -61,8 +65,8 @@ const ProjectDetailsModal = ({ open, onClose, project }) => {
           <Typography
             sx={{
               fontWeight: '400',
-              fontSize: '1.4rem',
-              lineHeight: '1.4rem',
+              fontSize: '1.6rem',
+              lineHeight: '2rem',
               color: 'primary.400',
               marginTop: '1rem',
             }}
@@ -112,28 +116,30 @@ const ProjectDetailsModal = ({ open, onClose, project }) => {
           </Link>
         </Stack>
       </DialogContent>
-      <DialogActions>
-        <Button
-          variant={'outlined'}
-          sx={{
-            width: '100%',
-          }}
-          href={project.demoURL}
-          target='_blank'
-        >
-          {' '}
-          <Typography
+      {project.demoURL !== '' && (
+        <DialogActions>
+          <Button
+            variant={'outlined'}
             sx={{
-              fontWeight: '500',
-              fontSize: '1.5rem',
-              lineHeight: '1.5rem',
-              color: 'primary.600',
+              width: '100%',
             }}
+            href={project.demoURL}
+            target='_blank'
           >
-            Open Project
-          </Typography>
-        </Button>
-      </DialogActions>
+            {' '}
+            <Typography
+              sx={{
+                fontWeight: '500',
+                fontSize: '1.5rem',
+                lineHeight: '1.5rem',
+                color: 'primary.600',
+              }}
+            >
+              Open Project
+            </Typography>
+          </Button>
+        </DialogActions>
+      )}
     </Dialog>
   );
 };

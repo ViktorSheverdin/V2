@@ -1,4 +1,5 @@
 import { Box, Stack, Typography, Link } from '@mui/material';
+
 const Footer = () => {
   return (
     <Box
@@ -30,12 +31,8 @@ const Footer = () => {
                 whiteSpace: 'pre-line',
               }}
             >
-              {` MERN stack (MongoDB, Express, React.js, Node,js), Full-Stack
-              development focusing my interest mainly on Front-End development
-              and intend to use this knowledge to serve as a valuable asset for
-              Front-End developer.
-              
-              Copyright © All rights reserved | This template is made with  by Viktor Sheverdin`}
+              Copyright © All rights reserved | This website was made with ❤️ by
+              Viktor Sheverdin
             </Typography>
           </Stack>
           <Stack
