@@ -15,7 +15,6 @@ const HoverDisplay = ({ project }) => {
         alignContent: 'center',
         justifyContent: 'center',
         textAlign: 'center',
-        zIndex: 999,
       }}
     >
       <Typography
